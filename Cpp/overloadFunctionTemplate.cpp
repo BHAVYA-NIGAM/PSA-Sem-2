@@ -20,23 +20,20 @@ int main() {
   int d1[Lim] = {0,7,0,4,1,7};
   int d2[Lim] = {0,7,2,0,1,9};
   cout<<"Original Array : "<< endl;
-  for(i=0;i<Lim;i++) 
-    cout<<d1[i]<< " ";
-  cout<<endl;
-  for(i=0;i<Lim;i++) 
-    cout<<d2[i]<< " ";
-  cout<<endl;
+  Show(d1);
+  Show(d2);
   cout<<"Using compiler genrated int swapper"<< endl;
   Swap(d1,d2);
   cout<<"Updated Array : "<< endl;
-  for(i=0;i<Lim;i++) 
-    cout<<d1[i]<< " ";
-  cout<<endl;
-  for(i=0;i<Lim;i++) 
-    cout<<d2[i]<< " ";
-  cout<<endl;
+  Show(d1);
+  Show(d2);
 }
 
+void Show(int arr[]) {
+  for(int i=0;i<Lim;i++) 
+    cout<<arr[i]<< " ";
+  cout<<endl;
+}
 
 template <typename T>
 void Swap(T &a, T &b) {
